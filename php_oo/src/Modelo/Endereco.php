@@ -2,7 +2,7 @@
 
 namespace Alura\Banco\Modelo;
 use Alura\Banco\Modelo\Funcionario\AcessoPropriedades;
-
+require_once 'C:\Users\Humberto\Desktop\php\php_excecptions\php_oo\src\Modelo\Funcionario\AcessoPropriedades.php';
 
 
 final class Endereco

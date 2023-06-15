@@ -1,7 +1,9 @@
 <?php 
 
 namespace Alura\Banco\Modelo\Conta;
+use Alura\Banco\Modelo\Conta\SaldoInsuficienteException;
 
+require_once 'C:\Users\Humberto\Desktop\php\php_excecptions\php_oo\src\Modelo\Conta\SaldoInsuficienteException.php';
 
 abstract class Conta
 {
@@ -32,10 +34,10 @@ abstract class Conta
          
         $valorSaque = $valorASacar + $tarifaSaque;
         if($valorSaque > $this->saldo){
-            echo "saldo insuficiente".PHP_EOL;
-        }else{
-            $this->saldo -= $valorSaque;
+           throw new SaldoInsuficienteException ($valorSaque, $this->saldo);
         }
+            $this->saldo -= $valorSaque;
+        
 
     }
 
@@ -43,8 +45,7 @@ abstract class Conta
     public function deposita(float $valorADepositar):void
     {
         if($valorADepositar < 0){
-            echo "valor insuficiente para deposito!".PHP_EOL;
-            return;
+            throw new \InvalidArgumentException();
         }
             $this->saldo += $valorADepositar;
         

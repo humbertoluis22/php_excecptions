@@ -1,7 +1,7 @@
 <?php
 
-require_once 'C:\Users\Humberto\Desktop\php\php_oo\php_oo\src\Modelo\autoload.php';
-require_once 'C:\Users\Humberto\Desktop\php\php_oo\php_oo\src\Service\ControladorDeBonificacoes';
+require_once 'C:\Users\Humberto\Desktop\php\php_excecptions\php_oo\src\Modelo\autoload.php';
+require_once 'C:\Users\Humberto\Desktop\php\php_excecptions\php_oo\src\Service\ControladorDeBonificacoes';
 
 use Alura\Banco\Modelo\Cpf;
 use Alura\Banco\Modelo\Funcionario\Desenvolvedor;
